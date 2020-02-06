@@ -1,7 +1,7 @@
 {
   "_type": "export",
   "__export_format": 4,
-  "__export_date": "2020-02-06T16:15:19.887Z",
+  "__export_date": "2020-02-06T19:23:36.679Z",
   "__export_source": "insomnia.desktop.app:v7.0.6",
   "resources": [
     {
@@ -58,32 +58,32 @@
       "_type": "workspace"
     },
     {
-      "_id": "req_5ca82d7760d649a6969f368c30646ede",
+      "_id": "req_e36e78a5473c42e6a249fb10d2f941c7",
       "authentication": {},
       "body": {
         "mimeType": "application/graphql",
-        "text": "{\"query\":\"{\\n  myExpenses(first: 10, offset: 0) {\\n    id\\n    userId\\n    amount\\n    description\\n    createdAt\\n    category {\\n      id\\n      userId\\n      createdAt\\n      displayName\\n    }\\n  }\\n}\\n\"}"
+        "text": "{\"query\":\"mutation createCategory {\\n  createCategory(displayName: \\\"My category\\\") {\\n    category {\\n      id\\n      userId\\n      createdAt\\n      displayName\\n    }\\n  }\\n}\\n\",\"operationName\":\"createCategory\"}"
       },
-      "created": 1581003289648,
+      "created": 1581012809860,
       "description": "",
       "headers": [
         {
-          "id": "pair_40f1060c7240477387d7f43d3cc2037b",
+          "id": "pair_db00547f8257486a893c936bc6fa09eb",
           "name": "Content-Type",
           "value": "application/json"
         },
         {
           "description": "",
-          "id": "pair_5ea3683d95664b30968cab00a4670b7d",
+          "id": "pair_73d121c292814779874e1134e959c6ea",
           "name": "Authorization",
           "value": "Bearer {{ ACCESS_TOKEN  }}"
         }
       ],
       "isPrivate": false,
-      "metaSortKey": -1581003289648,
+      "metaSortKey": -1581012809860,
       "method": "POST",
-      "modified": 1581005333028,
-      "name": "Get my expenses",
+      "modified": 1581013877129,
+      "name": "Create category",
       "parameters": [],
       "parentId": "fld_015c9997c9c442a9bbdf8922f222aab9",
       "settingDisableRenderRequestBody": false,
@@ -108,11 +108,49 @@
       "_type": "request_group"
     },
     {
+      "_id": "req_5ca82d7760d649a6969f368c30646ede",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"{\\n  myExpenses(first: 10, offset: 0) {\\n    id\\n    userId\\n    amount\\n    description\\n    createdAt\\n    category {\\n      id\\n      userId\\n      createdAt\\n      displayName\\n    }\\n  }\\n}\\n\"}"
+      },
+      "created": 1581003289648,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_40f1060c7240477387d7f43d3cc2037b",
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "description": "",
+          "id": "pair_5ea3683d95664b30968cab00a4670b7d",
+          "name": "Authorization",
+          "value": "Bearer {{ ACCESS_TOKEN  }}"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1581003289648,
+      "method": "POST",
+      "modified": 1581013132990,
+      "name": "Get my expenses",
+      "parameters": [],
+      "parentId": "fld_015c9997c9c442a9bbdf8922f222aab9",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ API_SERVER_URL  }}",
+      "_type": "request"
+    },
+    {
       "_id": "req_6232ae6a47224175a724874ed41927c6",
       "authentication": {},
       "body": {
         "mimeType": "application/graphql",
-        "text": "{\"query\":\"{\\n  myCategories(first: 1, offset: 1) {\\n    id\\n    userId\\n    createdAt\\n    displayName\\n    expenses(first: 0, offset: 10) {\\n      id\\n      userId\\n      description\\n      amount\\n      createdAt\\n    }\\n  }\\n}\\n\"}"
+        "text": "{\"query\":\"{\\n  myCategories(first: 100, offset: 0) {\\n    id\\n    userId\\n    createdAt\\n    displayName\\n    expenses(first: 0, offset: 10) {\\n      id\\n      userId\\n      description\\n      amount\\n      createdAt\\n    }\\n  }\\n}\\n\"}"
       },
       "created": 1580937493445,
       "description": "",
@@ -132,7 +170,7 @@
       "isPrivate": false,
       "metaSortKey": -1580937493445,
       "method": "POST",
-      "modified": 1581005348635,
+      "modified": 1581015740906,
       "name": "Get my categories",
       "parameters": [],
       "parentId": "fld_015c9997c9c442a9bbdf8922f222aab9",
@@ -223,7 +261,7 @@
       },
       "isPrivate": false,
       "metaSortKey": 1581003324671,
-      "modified": 1581005701626,
+      "modified": 1581016633768,
       "name": "localhost",
       "parentId": "env_21d5e4f6d55c707f0d83beba1e6c48930d72cdee",
       "_type": "environment"
