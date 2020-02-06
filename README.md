@@ -19,3 +19,8 @@ Includes the following repos:
 Includes the following repos:
 
 - [ba-auth-api-client](https://github.com/budgetsapp/ba-auth-api-client)
+
+
+## Prerequisites
+
+Install [Insomnia (client for REST/GraphQL API)](https://insomnia.rest/graphql/) and import [Insomia.json](./Insomnia.json) workspace 
