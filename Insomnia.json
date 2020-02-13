@@ -1,127 +1,36 @@
 {
   "_type": "export",
   "__export_format": 4,
-  "__export_date": "2020-02-09T15:39:21.619Z",
-  "__export_source": "insomnia.desktop.app:v7.0.6",
+  "__export_date": "2020-02-13T10:00:06.810Z",
+  "__export_source": "insomnia.desktop.app:v7.1.0",
   "resources": [
     {
-      "_id": "req_808f5335b6c34540859e16dee89e6564",
-      "authentication": {},
-      "body": {
-        "mimeType": "application/json",
-        "text": "{\n\t\"login\": \"ba-user-1\",\n\t\"password\": \"ba-password\"\n}"
-      },
-      "created": 1580934083527,
-      "description": "",
-      "headers": [
-        {
-          "id": "pair_ff83c66949444a02a226adeac3a561c2",
-          "name": "Content-Type",
-          "value": "application/json"
-        }
-      ],
-      "isPrivate": false,
-      "metaSortKey": -1580934083527,
-      "method": "POST",
-      "modified": 1581262493807,
-      "name": "Signin",
-      "parameters": [],
-      "parentId": "fld_2e0dcd02f8ec4581927bb126d36ff0e1",
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingFollowRedirects": "global",
-      "settingRebuildPath": true,
-      "settingSendCookies": true,
-      "settingStoreCookies": true,
-      "url": "{{ AUTH_API_SERVER_URL  }}/v1/signin",
-      "_type": "request"
-    },
-    {
-      "_id": "fld_2e0dcd02f8ec4581927bb126d36ff0e1",
-      "created": 1580934035604,
-      "description": "",
-      "environment": {},
-      "environmentPropertyOrder": null,
-      "metaSortKey": -1580934035604,
-      "modified": 1580934035604,
-      "name": "BA Auth API",
-      "parentId": "wrk_c57c86d48e5a4ea9b344bae5456bd15b",
-      "_type": "request_group"
-    },
-    {
-      "_id": "wrk_c57c86d48e5a4ea9b344bae5456bd15b",
-      "created": 1580933643070,
-      "description": "Budgets App",
-      "modified": 1581005572675,
-      "name": "BA",
-      "parentId": null,
-      "_type": "workspace"
-    },
-    {
-      "_id": "req_af42582fdab24f59b46af39c3d4d072f",
-      "authentication": {},
-      "body": {
-        "mimeType": "application/json",
-        "text": ""
-      },
-      "created": 1581262482747,
-      "description": "",
-      "headers": [
-        {
-          "id": "pair_ff83c66949444a02a226adeac3a561c2",
-          "name": "Content-Type",
-          "value": "application/json"
-        },
-        {
-          "description": "",
-          "id": "pair_b9bcda2f82f44657b8b8b67d1316a523",
-          "name": "Authorization",
-          "value": "Bearer {{ REFRESH_TOKEN  }}"
-        }
-      ],
-      "isPrivate": false,
-      "metaSortKey": -1580934030402.75,
-      "method": "GET",
-      "modified": 1581262691832,
-      "name": "Refresh",
-      "parameters": [],
-      "parentId": "fld_2e0dcd02f8ec4581927bb126d36ff0e1",
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingFollowRedirects": "global",
-      "settingRebuildPath": true,
-      "settingSendCookies": true,
-      "settingStoreCookies": true,
-      "url": "{{ AUTH_API_SERVER_URL  }}/v1/refresh",
-      "_type": "request"
-    },
-    {
-      "_id": "req_e36e78a5473c42e6a249fb10d2f941c7",
+      "_id": "req_447b7109270849bb9d29d65fc2fb8ad9",
       "authentication": {},
       "body": {
         "mimeType": "application/graphql",
-        "text": "{\"query\":\"mutation createCategory {\\n  createCategory(displayName: \\\"My category\\\") {\\n    category {\\n      id\\n      userId\\n      createdAt\\n      displayName\\n    }\\n  }\\n}\\n\",\"operationName\":\"createCategory\"}"
+        "text": "{\"query\":\"{\\n  category(id: \\\"c1cc88e3-731a-4316-8270-7fe15a97fcdb\\\") {\\n    id\\n    userId\\n    createdAt\\n    displayName\\n    expenses(first: 10, offset: 0) {\\n      id\\n      userId\\n      amount\\n      description\\n      createdAt\\n    }\\n  }\\n}\\n\"}"
       },
-      "created": 1581012809860,
+      "created": 1580933704215,
       "description": "",
       "headers": [
         {
-          "id": "pair_db00547f8257486a893c936bc6fa09eb",
+          "id": "pair_8e63129bb1d74ebf96020e178f316676",
           "name": "Content-Type",
           "value": "application/json"
         },
         {
           "description": "",
-          "id": "pair_73d121c292814779874e1134e959c6ea",
+          "id": "pair_aea5f5c35d2b43a4bc6db8739d387815",
           "name": "Authorization",
           "value": "Bearer {{ ACCESS_TOKEN  }}"
         }
       ],
       "isPrivate": false,
-      "metaSortKey": -1581012809860,
+      "metaSortKey": -1580933977278.5,
       "method": "POST",
-      "modified": 1581013877129,
-      "name": "Create category",
+      "modified": 1581587968312,
+      "name": "Get category",
       "parameters": [],
       "parentId": "fld_015c9997c9c442a9bbdf8922f222aab9",
       "settingDisableRenderRequestBody": false,
@@ -146,32 +55,41 @@
       "_type": "request_group"
     },
     {
-      "_id": "req_625aa8446a7b4485abc48c4af1b37439",
+      "_id": "wrk_c57c86d48e5a4ea9b344bae5456bd15b",
+      "created": 1580933643070,
+      "description": "Budgets App",
+      "modified": 1581005572675,
+      "name": "BA",
+      "parentId": null,
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_6232ae6a47224175a724874ed41927c6",
       "authentication": {},
       "body": {
         "mimeType": "application/graphql",
-        "text": "{\"query\":\"mutation createExpense {\\n  createExpense(categoryId: \\\"c1cc88e3-731a-4316-8270-7fe15a97fcdb\\\", amount: 100, description: \\\"Some description\\\") {\\n    expense {\\n      id,\\n      userId,\\n      amount,\\n      description,\\n      createdAt,\\n    }\\n  }\\n}\\n\",\"operationName\":\"createExpense\"}"
+        "text": "{\"query\":\"{\\n  myCategories(first: 10, offset: 0) {\\n    id\\n    userId\\n    createdAt\\n    displayName\\n    expensesTotal\\n    expenses(first: 10, offset: 0) {\\n      id\\n      userId\\n      description\\n      amount\\n      createdAt\\n    }\\n  }\\n}\\n\"}"
       },
-      "created": 1581188127554,
+      "created": 1580937493445,
       "description": "",
       "headers": [
         {
-          "id": "pair_db00547f8257486a893c936bc6fa09eb",
+          "id": "pair_14347015662b4151bedcae312b2ec2af",
           "name": "Content-Type",
           "value": "application/json"
         },
         {
           "description": "",
-          "id": "pair_73d121c292814779874e1134e959c6ea",
+          "id": "pair_89c3f48b3f494b96ba6e805ccdbe9264",
           "name": "Authorization",
           "value": "Bearer {{ ACCESS_TOKEN  }}"
         }
       ],
       "isPrivate": false,
-      "metaSortKey": -1581008049754,
+      "metaSortKey": -1580937493445,
       "method": "POST",
-      "modified": 1581191963411,
-      "name": "Create expense",
+      "modified": 1581587963295,
+      "name": "Get my categories",
       "parameters": [],
       "parentId": "fld_015c9997c9c442a9bbdf8922f222aab9",
       "settingDisableRenderRequestBody": false,
@@ -208,7 +126,7 @@
       "isPrivate": false,
       "metaSortKey": -1581003289648,
       "method": "POST",
-      "modified": 1581013132990,
+      "modified": 1581587962077,
       "name": "Get my expenses",
       "parameters": [],
       "parentId": "fld_015c9997c9c442a9bbdf8922f222aab9",
@@ -222,184 +140,32 @@
       "_type": "request"
     },
     {
-      "_id": "req_6232ae6a47224175a724874ed41927c6",
+      "_id": "req_e36e78a5473c42e6a249fb10d2f941c7",
       "authentication": {},
       "body": {
         "mimeType": "application/graphql",
-        "text": "{\"query\":\"{\\n  myCategories(first: 10, offset: 0) {\\n    id\\n    userId\\n    createdAt\\n    displayName\\n    expensesTotal\\n    expenses(first: 10, offset: 0) {\\n      id\\n      userId\\n      description\\n      amount\\n      createdAt\\n    }\\n  }\\n}\\n\"}"
+        "text": "{\"query\":\"mutation createCategory {\\n  createCategory(displayName: \\\"My category\\\") {\\n    category {\\n      id\\n      userId\\n      createdAt\\n      displayName\\n    }\\n  }\\n}\\n\",\"operationName\":\"createCategory\"}"
       },
-      "created": 1580937493445,
+      "created": 1581012809860,
       "description": "",
       "headers": [
         {
-          "id": "pair_14347015662b4151bedcae312b2ec2af",
+          "id": "pair_db00547f8257486a893c936bc6fa09eb",
           "name": "Content-Type",
           "value": "application/json"
         },
         {
           "description": "",
-          "id": "pair_89c3f48b3f494b96ba6e805ccdbe9264",
+          "id": "pair_73d121c292814779874e1134e959c6ea",
           "name": "Authorization",
           "value": "Bearer {{ ACCESS_TOKEN  }}"
         }
       ],
       "isPrivate": false,
-      "metaSortKey": -1580937493445,
+      "metaSortKey": -1581012809860,
       "method": "POST",
-      "modified": 1581197934576,
-      "name": "Get my categories",
-      "parameters": [],
-      "parentId": "fld_015c9997c9c442a9bbdf8922f222aab9",
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingFollowRedirects": "global",
-      "settingRebuildPath": true,
-      "settingSendCookies": true,
-      "settingStoreCookies": true,
-      "url": "{{ API_SERVER_URL  }}",
-      "_type": "request"
-    },
-    {
-      "_id": "req_e5c3e43a691d4781a8358a83f0d92df9",
-      "authentication": {},
-      "body": {
-        "mimeType": "application/graphql",
-        "text": "{\"query\":\"{\\n  searchMyCategories(query: \\\"taxi\\\") {\\n    id\\n    userId\\n    createdAt\\n    displayName\\n    expensesTotal\\n  }\\n}\\n\"}"
-      },
-      "created": 1581170681812,
-      "description": "",
-      "headers": [
-        {
-          "id": "pair_14347015662b4151bedcae312b2ec2af",
-          "name": "Content-Type",
-          "value": "application/json"
-        },
-        {
-          "description": "",
-          "id": "pair_89c3f48b3f494b96ba6e805ccdbe9264",
-          "name": "Authorization",
-          "value": "Bearer {{ ACCESS_TOKEN  }}"
-        }
-      ],
-      "isPrivate": false,
-      "metaSortKey": -1580936640965.5,
-      "method": "POST",
-      "modified": 1581172338929,
-      "name": "Search my categories",
-      "parameters": [],
-      "parentId": "fld_015c9997c9c442a9bbdf8922f222aab9",
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingFollowRedirects": "global",
-      "settingRebuildPath": true,
-      "settingSendCookies": true,
-      "settingStoreCookies": true,
-      "url": "{{ API_SERVER_URL  }}",
-      "_type": "request"
-    },
-    {
-      "_id": "req_db3fe55a57a54d4f816969618cc02159",
-      "authentication": {},
-      "body": {
-        "mimeType": "application/graphql",
-        "text": "{\"query\":\"{\\n  myCategoriesTotal\\n}\\n\"}"
-      },
-      "created": 1581102259460,
-      "description": "",
-      "headers": [
-        {
-          "id": "pair_14347015662b4151bedcae312b2ec2af",
-          "name": "Content-Type",
-          "value": "application/json"
-        },
-        {
-          "description": "",
-          "id": "pair_89c3f48b3f494b96ba6e805ccdbe9264",
-          "name": "Authorization",
-          "value": "Bearer {{ ACCESS_TOKEN  }}"
-        }
-      ],
-      "isPrivate": false,
-      "metaSortKey": -1580935788486,
-      "method": "POST",
-      "modified": 1581102294071,
-      "name": "Get my categories total",
-      "parameters": [],
-      "parentId": "fld_015c9997c9c442a9bbdf8922f222aab9",
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingFollowRedirects": "global",
-      "settingRebuildPath": true,
-      "settingSendCookies": true,
-      "settingStoreCookies": true,
-      "url": "{{ API_SERVER_URL  }}",
-      "_type": "request"
-    },
-    {
-      "_id": "req_254fba4bb0bf47dfb78fef64c2111e65",
-      "authentication": {},
-      "body": {
-        "mimeType": "application/graphql",
-        "text": "{\"query\":\"{\\n  myExpensesTotal\\n}\\n\"}"
-      },
-      "created": 1581194062936,
-      "description": "",
-      "headers": [
-        {
-          "id": "pair_14347015662b4151bedcae312b2ec2af",
-          "name": "Content-Type",
-          "value": "application/json"
-        },
-        {
-          "description": "",
-          "id": "pair_89c3f48b3f494b96ba6e805ccdbe9264",
-          "name": "Authorization",
-          "value": "Bearer {{ ACCESS_TOKEN  }}"
-        }
-      ],
-      "isPrivate": false,
-      "metaSortKey": -1580934936006.5,
-      "method": "POST",
-      "modified": 1581194075355,
-      "name": "Get my expenses total",
-      "parameters": [],
-      "parentId": "fld_015c9997c9c442a9bbdf8922f222aab9",
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingFollowRedirects": "global",
-      "settingRebuildPath": true,
-      "settingSendCookies": true,
-      "settingStoreCookies": true,
-      "url": "{{ API_SERVER_URL  }}",
-      "_type": "request"
-    },
-    {
-      "_id": "req_447b7109270849bb9d29d65fc2fb8ad9",
-      "authentication": {},
-      "body": {
-        "mimeType": "application/graphql",
-        "text": "{\"query\":\"{\\n  category(id: \\\"c1cc88e3-731a-4316-8270-7fe15a97fcdb\\\") {\\n    id\\n    userId\\n    createdAt\\n    displayName\\n    expenses(first: 10, offset: 0) {\\n      id\\n      userId\\n      amount\\n      description\\n      createdAt\\n    }\\n  }\\n}\\n\"}"
-      },
-      "created": 1580933704215,
-      "description": "",
-      "headers": [
-        {
-          "id": "pair_8e63129bb1d74ebf96020e178f316676",
-          "name": "Content-Type",
-          "value": "application/json"
-        },
-        {
-          "description": "",
-          "id": "pair_aea5f5c35d2b43a4bc6db8739d387815",
-          "name": "Authorization",
-          "value": "Bearer {{ ACCESS_TOKEN  }}"
-        }
-      ],
-      "isPrivate": false,
-      "metaSortKey": -1580933977278.5,
-      "method": "POST",
-      "modified": 1581199142936,
-      "name": "Get category",
+      "modified": 1581587958859,
+      "name": "Create category",
       "parameters": [],
       "parentId": "fld_015c9997c9c442a9bbdf8922f222aab9",
       "settingDisableRenderRequestBody": false,
@@ -436,8 +202,160 @@
       "isPrivate": false,
       "metaSortKey": -1580933977228.5,
       "method": "POST",
-      "modified": 1581191949032,
+      "modified": 1581587969673,
       "name": "Edit category",
+      "parameters": [],
+      "parentId": "fld_015c9997c9c442a9bbdf8922f222aab9",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ API_SERVER_URL  }}",
+      "_type": "request"
+    },
+    {
+      "_id": "req_db3fe55a57a54d4f816969618cc02159",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"{\\n  myCategoriesTotal\\n}\\n\"}"
+      },
+      "created": 1581102259460,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_14347015662b4151bedcae312b2ec2af",
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "description": "",
+          "id": "pair_89c3f48b3f494b96ba6e805ccdbe9264",
+          "name": "Authorization",
+          "value": "Bearer {{ ACCESS_TOKEN  }}"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1580935788486,
+      "method": "POST",
+      "modified": 1581587965931,
+      "name": "Get my categories total",
+      "parameters": [],
+      "parentId": "fld_015c9997c9c442a9bbdf8922f222aab9",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ API_SERVER_URL  }}",
+      "_type": "request"
+    },
+    {
+      "_id": "req_e5c3e43a691d4781a8358a83f0d92df9",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"{\\n  searchMyCategories(query: \\\"taxi\\\") {\\n    id\\n    userId\\n    createdAt\\n    displayName\\n    expensesTotal\\n  }\\n}\\n\"}"
+      },
+      "created": 1581170681812,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_14347015662b4151bedcae312b2ec2af",
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "description": "",
+          "id": "pair_89c3f48b3f494b96ba6e805ccdbe9264",
+          "name": "Authorization",
+          "value": "Bearer {{ ACCESS_TOKEN  }}"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1580936640965.5,
+      "method": "POST",
+      "modified": 1581587964572,
+      "name": "Search my categories",
+      "parameters": [],
+      "parentId": "fld_015c9997c9c442a9bbdf8922f222aab9",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ API_SERVER_URL  }}",
+      "_type": "request"
+    },
+    {
+      "_id": "req_625aa8446a7b4485abc48c4af1b37439",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"mutation createExpense {\\n  createExpense(categoryId: \\\"c1cc88e3-731a-4316-8270-7fe15a97fcdb\\\", amount: 100, description: \\\"Some description\\\") {\\n    expense {\\n      id,\\n      userId,\\n      amount,\\n      description,\\n      createdAt,\\n    }\\n  }\\n}\\n\",\"operationName\":\"createExpense\"}"
+      },
+      "created": 1581188127554,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_db00547f8257486a893c936bc6fa09eb",
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "description": "",
+          "id": "pair_73d121c292814779874e1134e959c6ea",
+          "name": "Authorization",
+          "value": "Bearer {{ ACCESS_TOKEN  }}"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1581008049754,
+      "method": "POST",
+      "modified": 1581587960573,
+      "name": "Create expense",
+      "parameters": [],
+      "parentId": "fld_015c9997c9c442a9bbdf8922f222aab9",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ API_SERVER_URL  }}",
+      "_type": "request"
+    },
+    {
+      "_id": "req_254fba4bb0bf47dfb78fef64c2111e65",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"{\\n  myExpensesTotal\\n}\\n\"}"
+      },
+      "created": 1581194062936,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_14347015662b4151bedcae312b2ec2af",
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "description": "",
+          "id": "pair_89c3f48b3f494b96ba6e805ccdbe9264",
+          "name": "Authorization",
+          "value": "Bearer {{ ACCESS_TOKEN  }}"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1580934936006.5,
+      "method": "POST",
+      "modified": 1581587967164,
+      "name": "Get my expenses total",
       "parameters": [],
       "parentId": "fld_015c9997c9c442a9bbdf8922f222aab9",
       "settingDisableRenderRequestBody": false,
@@ -454,7 +372,7 @@
       "authentication": {},
       "body": {
         "mimeType": "application/graphql",
-        "text": "{\"query\":\"mutation deleteCategory {\\n  deleteCategory(id: \\\"c1cc88e3-731a-4316-8270-7fe15a97fcdb\\\") {\\n    category {\\n      id\\n      displayName\\n    }\\n  }\\n}\\n\"}"
+        "text": "{\"query\":\"mutation deleteCategory {\\n  deleteCategory(id: \\\"c1cc88e3-731a-4316-8270-7fe15a97fcdb\\\") {\\n    category {\\n      id\\n      displayName\\n    }\\n  }\\n}\\n\",\"operationName\":\"deleteCategory\"}"
       },
       "created": 1581198975328,
       "description": "",
@@ -474,7 +392,7 @@
       "isPrivate": false,
       "metaSortKey": -1580933977178.5,
       "method": "POST",
-      "modified": 1581260831093,
+      "modified": 1581587977334,
       "name": "Delete category",
       "parameters": [],
       "parentId": "fld_015c9997c9c442a9bbdf8922f222aab9",
@@ -512,7 +430,7 @@
       "isPrivate": false,
       "metaSortKey": -1580933977128.5,
       "method": "POST",
-      "modified": 1581255007066,
+      "modified": 1581587980593,
       "name": "Delete expense",
       "parameters": [],
       "parentId": "fld_015c9997c9c442a9bbdf8922f222aab9",
@@ -523,6 +441,80 @@
       "settingSendCookies": true,
       "settingStoreCookies": true,
       "url": "{{ API_SERVER_URL  }}",
+      "_type": "request"
+    },
+    {
+      "_id": "req_808f5335b6c34540859e16dee89e6564",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"login\": \"ba-user-1\",\n\t\"password\": \"ba-password\"\n}"
+      },
+      "created": 1580934083527,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_ff83c66949444a02a226adeac3a561c2",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1580934083527,
+      "method": "POST",
+      "modified": 1581548548590,
+      "name": "Signin",
+      "parameters": [],
+      "parentId": "fld_2e0dcd02f8ec4581927bb126d36ff0e1",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ AUTH_API_SERVER_URL  }}/v1/signin",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_2e0dcd02f8ec4581927bb126d36ff0e1",
+      "created": 1580934035604,
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1580934035604,
+      "modified": 1580934035604,
+      "name": "BA Auth API",
+      "parentId": "wrk_c57c86d48e5a4ea9b344bae5456bd15b",
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_af42582fdab24f59b46af39c3d4d072f",
+      "authentication": {},
+      "body": {},
+      "created": 1581262482747,
+      "description": "",
+      "headers": [
+        {
+          "description": "",
+          "id": "pair_b9bcda2f82f44657b8b8b67d1316a523",
+          "name": "Authorization",
+          "value": "Bearer {{ REFRESH_TOKEN  }}"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1580934030402.75,
+      "method": "GET",
+      "modified": 1581587941390,
+      "name": "Refresh",
+      "parameters": [],
+      "parentId": "fld_2e0dcd02f8ec4581927bb126d36ff0e1",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ AUTH_API_SERVER_URL  }}/v1/refresh",
       "_type": "request"
     },
     {
@@ -567,10 +559,35 @@
       },
       "isPrivate": false,
       "metaSortKey": 1581003324671,
-      "modified": 1581262733200,
+      "modified": 1581587956046,
       "name": "localhost",
+      "parentId": "env_21d5e4f6d55c707f0d83beba1e6c48930d72cdee",
+      "_type": "environment"
+    },
+    {
+      "_id": "env_61eec0a869ef42878c30c8500d101ebe",
+      "color": null,
+      "created": 1581545927223,
+      "data": {
+        "ACCESS_TOKEN": "",
+        "API_SERVER_URL": "http://127.0.0.1:5010/graphql",
+        "AUTH_API_SERVER_URL": "http://budgets-app.dev:5011",
+        "REFRESH_TOKEN": ""
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "API_SERVER_URL",
+          "AUTH_API_SERVER_URL",
+          "ACCESS_TOKEN",
+          "REFRESH_TOKEN"
+        ]
+      },
+      "isPrivate": false,
+      "metaSortKey": 1581545927223,
+      "modified": 1581545967233,
+      "name": "docker containers",
       "parentId": "env_21d5e4f6d55c707f0d83beba1e6c48930d72cdee",
       "_type": "environment"
     }
   ]
-}
+}}
