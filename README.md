@@ -20,6 +20,9 @@ Includes the following repos:
 
 - [ba-auth-api-client](https://github.com/budgetsapp/ba-auth-api-client)
 
+## Docker setup
+
+[Docker docs](./DOCKER.md)
 
 ## Prerequisites
 
