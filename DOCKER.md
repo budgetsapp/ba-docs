@@ -17,6 +17,6 @@ In order to use mounted folders with Docker Toolbox add entry to Virtual Machine
 
 ## Containers
 
-`docker build -t ba-auth:latest .`
+`docker build -t ba-identity:latest .`
 
-`docker run -p 5011:8080 -v /C/Users/<user>/Documents/db:/usr/db ba-auth`
+`docker run -p 5011:8080 -v /C/Users/<user>/Documents/db:/usr/db ba-identity`
