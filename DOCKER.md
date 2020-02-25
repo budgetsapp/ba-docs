@@ -2,7 +2,7 @@
 
 Add new entry to `C:\Windows\System32\drivers\etc\hosts`:
 
-`192.168.99.100 budgets-app.dev`
+`192.168.99.100 budgetsapp.com`
 
 Move production/stage databases to `C/Users/<user>/Documents/db`
 

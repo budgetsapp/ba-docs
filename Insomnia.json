@@ -1,7 +1,7 @@
 {
   "_type": "export",
   "__export_format": 4,
-  "__export_date": "2020-02-13T10:00:06.810Z",
+  "__export_date": "2020-02-25T07:46:32.425Z",
   "__export_source": "insomnia.desktop.app:v7.1.0",
   "resources": [
     {
@@ -88,7 +88,7 @@
       "isPrivate": false,
       "metaSortKey": -1580937493445,
       "method": "POST",
-      "modified": 1581587963295,
+      "modified": 1582616743413,
       "name": "Get my categories",
       "parameters": [],
       "parentId": "fld_015c9997c9c442a9bbdf8922f222aab9",
@@ -126,7 +126,7 @@
       "isPrivate": false,
       "metaSortKey": -1581003289648,
       "method": "POST",
-      "modified": 1581587962077,
+      "modified": 1582616589839,
       "name": "Get my expenses",
       "parameters": [],
       "parentId": "fld_015c9997c9c442a9bbdf8922f222aab9",
@@ -164,7 +164,7 @@
       "isPrivate": false,
       "metaSortKey": -1581012809860,
       "method": "POST",
-      "modified": 1581587958859,
+      "modified": 1582616587248,
       "name": "Create category",
       "parameters": [],
       "parentId": "fld_015c9997c9c442a9bbdf8922f222aab9",
@@ -316,7 +316,7 @@
       "isPrivate": false,
       "metaSortKey": -1581008049754,
       "method": "POST",
-      "modified": 1581587960573,
+      "modified": 1582616588862,
       "name": "Create expense",
       "parameters": [],
       "parentId": "fld_015c9997c9c442a9bbdf8922f222aab9",
@@ -430,7 +430,7 @@
       "isPrivate": false,
       "metaSortKey": -1580933977128.5,
       "method": "POST",
-      "modified": 1581587980593,
+      "modified": 1581950259354,
       "name": "Delete expense",
       "parameters": [],
       "parentId": "fld_015c9997c9c442a9bbdf8922f222aab9",
@@ -544,7 +544,7 @@
       "color": "#00ff00",
       "created": 1581003324671,
       "data": {
-        "ACCESS_TOKEN": "",
+        "ACCESS_TOKEN": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODE5NTAyNjYsIm5iZiI6MTU4MTk1MDI2NiwianRpIjoiZjg2MTQ1ZTItNDQ1MS00YWEwLTg3MjYtOWRkYzU2YjY2OGIyIiwiZXhwIjoxNTg1NTUwMjY2LCJpZGVudGl0eSI6ImJhLXVzZXItMSIsImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyIsInVzZXJfY2xhaW1zIjp7ImlkIjoiMDNhMTIwNzAtNTBjMy00MzEyLWI5NzgtMzk0ZjQyMDU0NjkzIiwicm9sZXMiOlsiYWRtaW4iXSwiZGlzcGxheV9uYW1lIjoiQkEgVXNlciAxIn19.QxhCrcRrRKUOaUNeqfJr5DvSbt72-n7szNpA2fBo92w",
         "API_SERVER_URL": "http://127.0.0.1:5010/graphql",
         "AUTH_API_SERVER_URL": "http://127.0.0.1:5011",
         "REFRESH_TOKEN": ""
@@ -559,7 +559,7 @@
       },
       "isPrivate": false,
       "metaSortKey": 1581003324671,
-      "modified": 1581587956046,
+      "modified": 1581950278376,
       "name": "localhost",
       "parentId": "env_21d5e4f6d55c707f0d83beba1e6c48930d72cdee",
       "_type": "environment"
@@ -570,8 +570,8 @@
       "created": 1581545927223,
       "data": {
         "ACCESS_TOKEN": "",
-        "API_SERVER_URL": "http://127.0.0.1:5010/graphql",
-        "AUTH_API_SERVER_URL": "http://budgets-app.dev:5011",
+        "API_SERVER_URL": "http://budgetsapp.com:5010/graphql",
+        "AUTH_API_SERVER_URL": "http://budgetsapp.com:5011",
         "REFRESH_TOKEN": ""
       },
       "dataPropertyOrder": {
@@ -584,7 +584,7 @@
       },
       "isPrivate": false,
       "metaSortKey": 1581545927223,
-      "modified": 1581545967233,
+      "modified": 1582616570910,
       "name": "docker containers",
       "parentId": "env_21d5e4f6d55c707f0d83beba1e6c48930d72cdee",
       "_type": "environment"
